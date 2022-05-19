@@ -4,23 +4,20 @@ function register_nav() {
         array(
             'header' => 'Header'
         )
-    );
-    function registerNav(){
-        register_nav_menus(
-            array(
-                'footer' => 'Footer'
-            )
         );
-    }
-    function registerNav(){
-        register_nav_menus(
-            array(
-                '404' => '404'
-            )
+    register_nav_menus(
+        array(
+            'footer' => 'Footer'
+        )
+        );
+    register_nav_menus(
+        array(
+            '404' => '404'
+        )
         );
 }
 
-if(! functionExists('setup')):
+if (! function_exists('setup')):
     function setup(){
         register_nav();
         add_theme_support('post-thumbnails');
